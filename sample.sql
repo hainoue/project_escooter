@@ -1,4 +1,3 @@
-```
 SELECT 
   StartArea,
   StartTime,
@@ -18,4 +17,3 @@ FROM
 GROUP BY StartArea, StartTime
 -- ORDER BY StartArea
 -- LIMIT 10
-```
