@@ -40,6 +40,7 @@ However, as the name of micromobility suggests, e-scooters are not designed for 
 ## Software Used
 - SQL
   - Since the most of data consists more than 10,000 rows, SQL can organize it faster than the spreadsheet
+  - Sample Code
 - Excel
   - National Weather Service database did not provide csv file. Manually copied and pasted the dataset from website to Excel spreadsheet. 
 ## Cleaned Data
