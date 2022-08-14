@@ -1,0 +1,21 @@
+```
+SELECT 
+  StartArea,
+  StartTime,
+  COUNT(ID) as NumberOfTrips
+FROM
+  (SELECT 
+    TripID as ID,
+    left(StartTime,10) as StartTime,
+    TripDistance as TripDist,
+    TripDuration/60 as TripDur,
+    StartCommunityAreaName as StartArea,
+    EndCommunityAreaName as EndArea
+  FROM `capstoneproject-357619.escooter_chicago.trips2020`
+  WHERE StartCommunityAreaName IS NOT NULL AND EndCommunityAreaName IS NOT NULL
+  )
+-- WHERE StartArea = EndArea
+GROUP BY StartArea, StartTime
+-- ORDER BY StartArea
+-- LIMIT 10
+```
