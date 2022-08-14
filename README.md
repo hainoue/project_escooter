@@ -43,7 +43,7 @@ However, as the name of micromobility suggests, e-scooters are not designed for 
 - Excel
   - National Weather Service database did not provide csv file. Manually copied and pasted the dataset from website to Excel spreadsheet. 
 ## Cleaned Data
- 
+[Processed Data files](/Data_Cleaned)
 # Data Analysis
 - Community area witout rail stations tend to use e-scooter longer time/distance.
 - Community area with little bus usage tend to use e-scooter longer time/distance. 
