@@ -1,17 +1,17 @@
 # Introduction
-This is a documentation for the data analysis project I completed as a part of Google Data Analytics Professional Certificate. 
+This is a documentation of the data analysis project I completed as a part of Google Data Analytics Professional Certificate. 
 
 ## Statement of Purpose
 This project aimed to analyze public/open data about electric scooter usage to find key characteristics, and correlation with public transportation and weather.
 
 ## Background
-As we saw more and more electric scooters (e-scooters) or rental bikes (or electric bikes) in our daily basis, it is becoming a common way of transportation--often, referred to micromobility. [Study](https://www.wired.com/story/e-scooter-micromobility-infographics-cost-emissions/) shows the micromobility is a solution to the environmental problems since they are more sustainable and efficient compared to conventional vehicles. For example, fueling cost of e-scooter is simply 1.6% of conventional vehicles. 
-However, as the name of micromobility suggests, e-scooters are not designed for long distance trips. It often used to transport between other means of public transportation. This study tried to catch how e-scooters were used in the city setting where other transportation system such as bus and metro exists. 
+As we see more and more electric scooters (e-scooters) or rental bikes (or electric bikes) on a daily basis, it is becoming a common way of transportation--often referred to micromobility. [This study](https://www.wired.com/story/e-scooter-micromobility-infographics-cost-emissions/) shows that micromobility is a solution to some environmental problems because they are more sustainable and efficient compared to conventional vehicles. For example, fueling costs of e-scooters are only 1.6% of conventional vehicles. 
+However, as the name "micromobility" suggests, e-scooters are not designed for long distance trips. They are often used for transit between other means of public transportation. This study visualizes how e-scooters were used in a city setting where other transportation systems such as bus and metro exist. 
 
 ## Metrics
-1. Map of the city of Chicago with its communities shown visualizes data of e-scooter usage
-2. Correlation of Chicago's public transportation system and e-scooter usage is visualized
-3. Correlation of Chicago's weather history and e-scooter trip counts is visualized
+1. Map of the city of Chicago with its city districts shown, visualizing usage data of e-scooters
+2. Correlation of Chicago's public transportation system and e-scooter usage
+3. Correlation of Chicago's weather history and e-scooter trip count
 
 # Data Sources
 - Chicago Data Portal
@@ -28,40 +28,41 @@ However, as the name of micromobility suggests, e-scooters are not designed for 
 # Data Processing
 ## Cleaning
 - E-scooter Trips 2020 Data
-  - Start date and end date are same for 476049 data of 630816 total data. Decided to use only the date part and save as TripDate.
+  - Start date and end date are the same for 476049 rows of 630816 total rows. Decided to use only the dates and save as TripDate.
   - Start community area name and end community area name cannot be null. Eliminated all the null data.
-  - Verified there are no null data in the fields included for final data.
+  - Verified that there are no null data in the fields included for final data.
 - National Weather Service Data: 
-  - Modified the table by deleting unnecessary fields -- final table is with date, average temperature, precipitation, new snow, and snow depth.
-  - "T" standing for trace--meaning less than the 0.01 inch measured for rain and snow. Decided to change it to 0.
+  - Modified the table by deleting unnecessary fields -- final table has the date, average temperature, precipitation, new snow, and snow depth.
+  - "T" standing for trace--meaning less than the 0.01 inch measured for rain and snow. Decided to change "T" to 0.
 - CTA Ridership Data 
-  - The field of "beggining month" changed from 'yyyy-mm-dd' to 'yyyy-mm' format, since dd is always 01, in order to make a connection with existing data.
+  - The field of "beginning month" is changed from 'yyyy-mm-dd' to 'yyyy-mm', since dd is always 01, to make a connection with existing data.
 
 ## Software Used
 - SQL
-  - Since the most of data consists more than 10,000 rows, SQL can organize it faster than the spreadsheet
+  - Because most of the data sets consisted of more than 10,000 rows, SQL could organize them faster than the spreadsheet.
   - [Sample Code](/sample.sql)
 - Excel
-  - National Weather Service database did not provide csv file. Manually copied and pasted the dataset from website to Excel spreadsheet. 
+  - The National Weather Service database did not provide a csv file. Manually copied and pasted the dataset from the website to an Excel spreadsheet. 
 ## Cleaned Data
 [Processed Data files](/Data_Cleaned)
 # Data Analysis
-- Community area witout rail stations tend to use e-scooter longer time/distance.
-- Community area with little bus usage tend to use e-scooter longer time/distance. 
-- Almost 70% of trips are started and ended within the same community area.
+- Districts witout rail stations tended to use e-scooters for a longer time/distance.
+- Districts with little bus usage tended to use e-scooters for a longer time/distance. 
+- Almost 70% of trips began and ended within the same district.
 - Temperature and e-scooter trip count are significantly correlated.
-- E-scooter was used more on the weekend compared to weekdays.
-- E-scooter was used more in the late afternoon around 3pm to 7pm.
+- E-scooters were used more frequently on weekends compared to weekdays.
+- E-scooters were used more frequently in the late afternoon, between 3pm and 7pm.
 
 # Data Visualization
 [Tableau Public](https://public.tableau.com/views/E-ScooterUsageinChicagofromAug_toDec_in2020/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 ## User Interactability
-- For the first two maps, it can show/hide rail and bus lines with filters on the right side.
+- For the first two maps, rail and bus lines can be shown or hidden with the filters on the right.
 
 # Conclusion
-This project can be a stepping stone for even broader analysis of micomobility usage and can be used by rental e-scooter vendors to make business decisions such as how to distribute their e-scooters and forecasting their usage. Although this project is completed, it still has points of improvement:
-1. The data is from August to December in 2020--most recent available open-data. The effect of COVID-19 pandemic should be considered.
-2. Datasize is limited, broader data with more months will be required to make more accurate analysis.
-3. More detailed metrics are needed and correlation should be presented with numbers. 
+This project can be a stepping stone for even broader analyses of micomobility usage and can be applied by rental e-scooter vendors to make business decisions such as how to distribute their e-scooters and forecast their usage. Although this project is completed, it has points of improvement:
+1. The data is from August to December, 2020--the most recent available open-data. The effects of the COVID-19 pandemic should be explored.
+2. Data size is limited; broader data with a longer timeframe is required to make more accurate analyses.
+3. More detailed metrics should have been set and mentioned in the methodology.
+4. Incorporating numbers into the correlation visuals would have been helpful for a stronger analysis.
 
 Thank you for reading!
