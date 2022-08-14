@@ -55,7 +55,7 @@ However, as the name "micromobility" suggests, e-scooters are not designed for l
 
 # Data Visualization
 [Tableau Public](https://public.tableau.com/views/E-ScooterUsageinChicagofromAug_toDec_in2020/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
-## User Interactability
+## User Interaction 
 - For the first two maps, rail and bus lines can be shown or hidden with the filters on the right.
 
 # Conclusion
