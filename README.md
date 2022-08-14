@@ -55,6 +55,8 @@ However, as the name of micromobility suggests, e-scooters are not designed for 
 
 # Data Visualization
 [Tableau Public](https://public.tableau.com/views/E-ScooterUsageinChicagofromAug_toDec_in2020/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+## User Interactability
+- For the first two maps, it can show/hide rail and bus lines with filters on the right side.
 
 # Conclusion
 This project can be a stepping stone for even broader analysis of micomobility usage and can be used by rental e-scooter vendors to make business decisions such as how to distribute their e-scooters and forecasting their usage. Although this project is completed, it still has points of improvement:
